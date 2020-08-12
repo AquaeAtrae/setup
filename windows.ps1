@@ -3,6 +3,7 @@
 # My Personal Setup
 
 Disable-UAC
+Disable-MicrosoftUpdate
 
 # Get the base URI path from the ScriptToCall value
 $bstrappackage = "-bootstrapPackage"
@@ -21,17 +22,10 @@ function ExecuteScript {
 	Invoke-Expression ((new-object net.webclient).DownloadString("$helperUri/$script"))
 }
 
-choco feature disable --name showDownloadProgress
-
 ExecuteScript "SystemConfiguration.ps1"
-ExecuteScript "FileExplorerSettings.ps1"
 ExecuteScript "Features.ps1"
-ExecuteScript "PowerShell7.ps1"
 ExecuteScript "RemoveDefaultApps.ps1"
-ExecuteScript "VSCode.ps1"
-ExecuteScript "Browsers.ps1"
 ExecuteScript "DevTools.ps1"
-ExecuteScript "Docker.ps1"
 ExecuteScript "WSL.ps1"
 ExecuteScript "Projects.ps1"
 

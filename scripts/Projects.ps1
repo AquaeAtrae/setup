@@ -1,4 +1,4 @@
-$folder = "C:\git\code"
+$folder = "C:\git\github"
 New-Item $folder -ItemType Directory
 Set-location $folder
 git clone https://github.com/casz/dotfiles.git
