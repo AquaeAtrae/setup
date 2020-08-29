@@ -17,4 +17,6 @@ $WslPackageArgs = @{
   checksumType  = 'sha256' 
 }
 
-Install-ChocolateyPackage @WslPackageArgs
+# Install-ChocolateyPackage @WslPackageArgs
+
+Start-Process msiexec.exe -Wait -ArgumentList '/I @WslPackageArgs.url /quiet /qn /norestart'
