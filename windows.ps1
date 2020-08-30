@@ -27,9 +27,9 @@ ExecuteScript "Features.ps1"
 ExecuteScript "RemoveDefaultApps.ps1"
 ExecuteScript "DevTools.ps1"
 ExecuteScript "ChocolateyInstall-wsl2kernel.ps1"  # Fix for "WSL 2 requires an update to its kernel component."
-ExecuteScript "WSL.ps1"
-ExecuteScript "Projects.ps1"
+# ExecuteScript "WSL.ps1"
+# ExecuteScript "Projects.ps1"
 
-Enable-UAC
-Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula
+# Enable-UAC
+# Enable-MicrosoftUpdate
+# Install-WindowsUpdate -acceptEula
